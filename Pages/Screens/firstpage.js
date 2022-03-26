@@ -1,12 +1,17 @@
 import React from 'react' ;
-import {View, StyleSheet, Text, TextInput, Button} from 'react-native' ;
+import {View, StyleSheet, Text, TextInput, TouchableOpacity} from 'react-native' ;
 // import { FlatList } from 'react-native';
 import { ScrollView, Image } from 'react-native';
 import Card from '../../Components/card';
+import Header from '../header';
 import Color from '../../constants/Color';
-const Firstpage = () =>{
+import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+const Firstpage = props =>{
   return(
+
     <View style= {styles.screen}>
+      <Header title = "Ladoo" />
+
       <View style = {styles.tt}>
         <Text>"Eat what makes you happy !"</Text>
         
@@ -16,10 +21,13 @@ const Firstpage = () =>{
       <View style = {styles.full}>
         <View style = {styles.row}>
             <View style = {styles.finalcard} >
-            <Image source= {require('../../assets/Images/breakfast.png')}
+              <TouchableOpacity activeOpacity={0.5} onPress={() => {props.navigation.navigate({routeName: 'Chosen'}) ; 
+              }} >
+                <Image source= {require('../../assets/Images/breakfast.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "stretch"
                   /> 
+              </TouchableOpacity>
             </View>
             <View style={styles.finalcard}>
             <Image source= {require('../../assets/Images/dinner.png')}
@@ -50,10 +58,10 @@ const Firstpage = () =>{
                   /> 
             </View>
             <View style={styles.finalcard}>
-            <Image source= {require('../../assets/Images/dinner.png')}
+              <Image source= {require('../../assets/Images/dinner.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "cover"
-                  /> 
+              /> 
             </View> 
           </View>
           <View style = {styles.row}>
@@ -64,10 +72,10 @@ const Firstpage = () =>{
                   /> 
             </View>
             <View style={styles.finalcard}>
-            <Image source= {require('../../assets/Images/breakfast.png')}
+              <Image source= {require('../../assets/Images/breakfast.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "cover"
-                  /> 
+              /> 
             </View> 
           </View>
         </View>
@@ -127,18 +135,21 @@ const styles = StyleSheet.create({
     width: '48%',
     height: 150,
     //paddingTop: 100,
-    elevation:1,
+    //  elevation:7,
     margin:10,
     // padding:10, 
-    borderRadius: 20,
+    borderRadius: 10,
     backgroundColor: Color.accent,
+    borderColor: 'black',
+    overflow: 'hidden'
   },
   full:{
     flexDirection: "column",
     padding: 10,
     alignItems: 'stretch',
     height: '100%',
-    width:'100%'  }
+    width:'100%'  
+  }
 
 
 });

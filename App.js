@@ -6,9 +6,10 @@ import { StyleSheet, Text, View,Button, Modal , TextInput} from 'react-native';
 // import * as Font from 'expo-font' ;
 // import AppLoading from 'expo-app-loading';
 
-import Header from './Pages/header';
-import Firstpage from './Pages/Screens/firstpage';
+// import Header from './Pages/header';
+// import Firstpage from './Pages/Screens/firstpage';
 
+import Bnavigator from './Components/navigation/breakfastnavigator' ;
 
 // const fetchFonts = () => {
 //   return Font.loadAsync({
@@ -31,10 +32,7 @@ export default function App(){
 
 
   return(
-    <View style = {styles.screen}>
-      <Header title = "Ladoo" />
-      <Firstpage />
-    </View>
+    <Bnavigator />
 
   );
 };
