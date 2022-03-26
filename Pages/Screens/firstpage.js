@@ -2,10 +2,9 @@ import React from 'react' ;
 import {View, StyleSheet, Text, TextInput, TouchableOpacity} from 'react-native' ;
 // import { FlatList } from 'react-native';
 import { ScrollView, Image } from 'react-native';
-import Card from '../../Components/card';
 import Header from '../header';
 import Color from '../../constants/Color';
-import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+
 const Firstpage = props =>{
   return(
 

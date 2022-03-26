@@ -1,14 +1,13 @@
 import React from 'react' ;
 import {View, Text, Image, StyleSheet, ScrollView} from 'react-native' ;
-// import { ScrollView } from 'react-native-gesture-handler';
-
+import Card from '../card' ;
+import Cuisines from '../cuisines' ;
 const Breakfast = () =>{
     
     return(
       <View style = {styles.screen}>
-				<ScrollView showsVerticalScrollIndicator = {false}  >
-					<View  >
-					<Text>Hello</Text>
+				<ScrollView showsVerticalScrollIndicator = {false} style = {styles.scrollvw} >
+					<View >
 
 						<View style = {styles.img}>
 							<Image source= {require('../../assets/Images/breakfastscreen.png')}
@@ -16,8 +15,12 @@ const Breakfast = () =>{
 									resizeMode = "cover"
 								/> 
 						</View>
-						<Text>Hello</Text>
-
+						<View style = {styles.cuisine}>
+							<Cuisines/>
+						</View>
+						<View>
+							 <Card/> 
+						</View>
 					</View>
 				</ScrollView>
       </View>
@@ -31,15 +34,21 @@ const styles = StyleSheet.create({
           margin: 10
     },
 		img:{
-			// flex: 1,
-			height:'35%',
+			 flex: 2,
+			height: 200,
 			borderRadius: 25,
 			// elevation: 1,
-			overflow: 'hidden'
+			overflow: 'hidden',
+			margin: 10
 
 		},
-		part2:{
-			flex:1
+		scrollvw:{
+			flex:1,
+		},
+		cuisine:{
+			flex : 3,
+			marginBottom: 20
+			// border : 10
 		}
 });
 export default Breakfast ;

@@ -1,6 +1,4 @@
 import React, {useState} from 'react' ;
-import { StatusBar } from 'expo-status-bar';
-import {SearchBar} from 'react-native-elements' ;
 import { StyleSheet, Text, View,Button, Modal , TextInput} from 'react-native';
 
 // import * as Font from 'expo-font' ;
