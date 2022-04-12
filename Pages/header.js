@@ -4,13 +4,14 @@ import Color from '../constants/Color';
 const Header = props => {
   return(
     <View style = {styles.header}>
-		<View style = {{flex:1.5}}></View>
-    	<View style = {{flex:2}} >
+    	<View style = {{flex:1,  marginTop:20, paddingLeft: 20, paddingTop: 10}} >
 			<Image source= {require('../assets/Images/llogo.png')}
-				style = {{width: '25%' , height: '200%'}}
+				style = {{width: '25%' , height: '170%'}}
 				resizeMode = "contain"
 			/> 	
 		</View>
+				{/* <View style = {{flex:1}}></View> */}
+
 	</View>
   );
 };
@@ -19,9 +20,9 @@ const styles = StyleSheet.create({
 
 	header:{
 		width: '100%',
-		height: '10%',
-		paddingLeft:15 ,
-		backgroundColor: Color.primary
+		height: '9%',
+		// paddingLeft:15 ,
+		backgroundColor: Color.lightgrey
 	//npm start	alignItems: 'left',
 		// justifyContent: 'left'
 	},

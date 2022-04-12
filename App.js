@@ -1,33 +1,45 @@
 import React, {useState} from 'react' ;
 import { StyleSheet, Text, View,Button, Modal , TextInput} from 'react-native';
+import { useEffect } from 'react';
 
-// import * as Font from 'expo-font' ;
-// import AppLoading from 'expo-app-loading';
+// import {useFonts} from 'expo-font' ;
+
+import * as Font from 'expo-font' ;
+import AppLoading from 'expo-app-loading';
 
 // import Header from './Pages/header';
 // import Firstpage from './Pages/Screens/firstpage';
 
 import Bnavigator from './Components/navigation/breakfastnavigator' ;
 
-// const fetchFonts = () => {
-//   return Font.loadAsync({
-//     'open-sans': require('./assets/fonts/OpenSans-LightItalic.ttf')
-//   });
+const fetchFonts = () => {
+  return Font.loadAsync({
+    'Ramaraja-Regular': require('./assets/fonts/Ramaraja-Regular.ttf'),
+    'Suravaram-Regular': require('./assets/fonts/Suravaram-Regular.ttf'),
+    'PlayfairDisplaySC-Regular': require('./assets/fonts/PlayfairDisplaySC-Regular.ttf'),
+  });
 
-// };
+};
 export default function App(){
 
-  // const [dataLoaded, setDataLoaded] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);
 
-  // if(!dataLoaded){
-  //   return( 
-  //     <AppLoading 
-  //       startAsync = {fetchFonts} 
-  //       onFinish = {() => setDataLoaded(true)}
-  //     />
-  //   );
-  // }
+  if(!dataLoaded){
+    return( 
+      <AppLoading 
+        startAsync = {fetchFonts} 
+        onFinish = {() => setDataLoaded(true)}
+        onError ={alert('Error loading assets')}
+      />
+    );
+  }
 
+  useEffect(()=>{
+    fetch('https://127.0.01:8000/recipes/')
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+}, []);
 
   return(
     <Bnavigator />
@@ -104,3 +116,22 @@ const styles = StyleSheet.create({
 
 
 
+
+
+
+// import  React from 'react' ;
+// import { Component } from 'react';
+// import {StyleSheet, Text, View, ActivityIndicator } from 'react-native' ;
+
+// function App(){
+   
+//     return(
+//         <View>
+//             <Text>
+//                 Hey
+//             </Text>
+//         </View>
+//     );
+// }
+
+// export default App ;

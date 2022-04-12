@@ -1,5 +1,8 @@
 export default{
     primary: '#BEAEE2',
     accent: '#B5EAEA',
-    breakfast: '#FFE497'
+    lightgrey : '#DFDFDE',
+    breakfast: '#FFE497',
+    // darkgrey: '#886F6F',
+    darkgrey: '#AAAAAA'
 };

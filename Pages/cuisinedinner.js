@@ -6,7 +6,7 @@ const Cuisines = () =>{
         <View style = {styles.hori}>
             <View style = {styles.names}>
                 <View style = {styles.logo}>
-                <Image source= {require('../assets/Images/CuisineLogos/Indian.png')}
+                <Image source= {require('../assets/Images/CuisineLogos/indiandinner.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "contain"
                   />    
@@ -15,7 +15,7 @@ const Cuisines = () =>{
             </View>
             <View style = {styles.names}>
             <View style = {styles.logo}>
-                <Image source= {require('../assets/Images/CuisineLogos/Italian.png')}
+                <Image source= {require('../assets/Images/CuisineLogos/italiandinner.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "contain"
                   />    
@@ -24,7 +24,7 @@ const Cuisines = () =>{
             </View>
             <View style = {styles.names}>
             <View style = {styles.logo}>
-                <Image source= {require('../assets/Images/CuisineLogos/Chinese.png')}
+                <Image source= {require('../assets/Images/CuisineLogos/chinesedinner.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "contain"
                   />    
@@ -33,7 +33,7 @@ const Cuisines = () =>{
             </View>
             <View style = {styles.names}>
             <View style = {styles.logo}>
-                <Image source= {require('../assets/Images/CuisineLogos/SouthIndian.png')}
+                <Image source= {require('../assets/Images/CuisineLogos/sidinner.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "contain"
                   />    

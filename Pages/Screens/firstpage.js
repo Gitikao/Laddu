@@ -12,15 +12,17 @@ const Firstpage = props =>{
       <Header title = "Ladoo" />
 
       <View style = {styles.tt}>
-        <Text>"Eat what makes you happy !"</Text>
-        
+        {/* <Text>"Eat what makes you happy !"</Text> */}
+        {/* <Text>
+
+        </Text> */}
 
       </View>
       <ScrollView showsVerticalScrollIndicator = {false}> 
       <View style = {styles.full}>
         <View style = {styles.row}>
             <View style = {styles.finalcard} >
-              <TouchableOpacity activeOpacity={0.5} onPress={() => {props.navigation.navigate({routeName: 'Chosen'}) ; 
+              <TouchableOpacity activeOpacity={0.5} onPress={() => {props.navigation.navigate({routeName: 'Breakfast'}) ; 
               }} >
                 <Image source= {require('../../assets/Images/breakfast.png')}
                     style = {{width: '100%' , height: '100%'}}
@@ -29,37 +31,39 @@ const Firstpage = props =>{
               </TouchableOpacity>
             </View>
             <View style={styles.finalcard}>
-            <Image source= {require('../../assets/Images/dinner.png')}
+            <TouchableOpacity activeOpacity={0.5} onPress={() => {props.navigation.navigate({routeName: 'Dinner'}) ; }}>
+              <Image source= {require('../../assets/Images/lunch.png')}
                     style = {{width: '100%' , height: '100%'}}
                     resizeMode = "stretch"
                   /> 
-            </View> 
-          </View>
-          <View style = {styles.row}>
-            <View style = {styles.finalcard} >
-            <Image source= {require('../../assets/Images/lunch.png')}
-                    style = {{width: '100%' , height: '100%'}}
-                    resizeMode = "stretch"
-                  /> 
-            </View>
-            <View style={styles.finalcard}>
-            <Image source= {require('../../assets/Images/dinner.png')}
-                    style = {{width: '100%' , height: '100%'}}
-                    resizeMode = "stretch"
-                  /> 
+              </TouchableOpacity>
             </View> 
           </View>
           <View style = {styles.row}>
             <View style = {styles.finalcard} >
             <Image source= {require('../../assets/Images/snacks.png')}
                     style = {{width: '100%' , height: '100%'}}
-                    resizeMode = "cover"
+                    resizeMode = "stretch"
                   /> 
             </View>
             <View style={styles.finalcard}>
-              <Image source= {require('../../assets/Images/dinner.png')}
+            <Image source= {require('../../assets/Images/dinner.png')}
                     style = {{width: '100%' , height: '100%'}}
-                    resizeMode = "cover"
+                    resizeMode = "stretch"
+                  /> 
+            </View> 
+          </View>
+          <View style = {styles.row}>
+            <View style = {styles.finalcard} >
+            <Image source= {require('../../assets/Images/salad.png')}
+                    style = {{width: '100%' , height: '100%'}}
+                    resizeMode = "stretch"
+                  /> 
+            </View>
+            <View style={styles.finalcard}>
+              <Image source= {require('../../assets/Images/shakes.png')}
+                    style = {{width: '100%' , height: '100%'}}
+                    resizeMode = "stretch"
               /> 
             </View> 
           </View>
@@ -71,9 +75,9 @@ const Firstpage = props =>{
                   /> 
             </View>
             <View style={styles.finalcard}>
-              <Image source= {require('../../assets/Images/breakfast.png')}
+              <Image source= {require('../../assets/Images/dessert.png')}
                     style = {{width: '100%' , height: '100%'}}
-                    resizeMode = "cover"
+                    resizeMode = "stretch"
               /> 
             </View> 
           </View>
@@ -87,7 +91,8 @@ const styles = StyleSheet.create({
 
   screen:{
 		flex: 1,
-		padding: 25,
+    // backgroundColor: Color.primary
+		// padding: 25,
   },
   tt:{
     alignItems:'center',
@@ -144,7 +149,7 @@ const styles = StyleSheet.create({
   },
   full:{
     flexDirection: "column",
-    padding: 10,
+    padding: 25,
     alignItems: 'stretch',
     height: '100%',
     width:'100%'  

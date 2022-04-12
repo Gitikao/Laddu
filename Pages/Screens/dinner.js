@@ -1,19 +1,16 @@
 import React from 'react' ;
-import {View, Text, Image, StyleSheet, ScrollView, TouchableOpacity} from 'react-native' ;
-import Header from '../header';
-// import GHeader from '../../Components/generalheader' ;
+import {View, Text, Image, StyleSheet, ScrollView} from 'react-native' ;
 import Card from '../card' ;
 import Cuisines from '../cuisines' ;
-const Breakfast = props =>{
+const Breakfast = () =>{
     
     return(
       <View style = {styles.screen}>
-		  		<Header />
 				<ScrollView showsVerticalScrollIndicator = {false} style = {styles.scrollvw} >
 					<View >
 
 						<View style = {styles.img}>
-							<Image source= {require('../../assets/Images/breakfastscreen.png')}
+							<Image source= {require('../../assets/Images/dinnerscreen.png')}
 									style = {{width: '100%' , height: '100%'}}
 									resizeMode = "cover"
 								/> 
@@ -22,14 +19,9 @@ const Breakfast = props =>{
 							<Cuisines/>
 						</View>
 						<View>
-							<TouchableOpacity activeOpacity={0.5} onPress={() => {props.navigation.navigate({routeName: 'Recipe'}) ; 
-							}} >
 							 <Card/>
-							 </TouchableOpacity>
 							 <Card/>
-							<Card/>
-							<Card/>
-							<Card/>
+
 						</View>
 					</View>
 				</ScrollView>
@@ -41,7 +33,7 @@ const styles = StyleSheet.create({
 
     screen:{
           flex: 1,
-        //   margin: 10
+          margin: 10
     },
 		img:{
 			 flex: 2,
@@ -54,8 +46,6 @@ const styles = StyleSheet.create({
 		},
 		scrollvw:{
 			flex:1,
-			margin : 10,
-			paddingTop: 25
 		},
 		cuisine:{
 			flex : 3,
